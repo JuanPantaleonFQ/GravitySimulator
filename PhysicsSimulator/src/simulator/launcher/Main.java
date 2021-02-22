@@ -18,13 +18,13 @@ public class Main {
 
 	// default values for some parameters
 	//
-	private final static Double _dtimeDefaultValue = 2500.0;
+	private final static double _dtimeDefaultValue = 2500.0;
 	private final static String _forceLawsDefaultValue = "nlug";
 	private final static String _stateComparatorDefaultValue = "epseq";
 
 	// some attributes to stores values corresponding to command-line parameters
 	//
-	private static Double _dtime = null;
+	private static double _dtime = null;
 	private static String _inFile = null;
 	private static JSONObject _forceLawsInfo = null;
 	private static JSONObject _stateComparatorInfo = null;
