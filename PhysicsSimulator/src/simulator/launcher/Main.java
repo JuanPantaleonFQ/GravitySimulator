@@ -18,13 +18,13 @@ public class Main {
 
 	// default values for some parameters
 	//
-	private final static double _dtimeDefaultValue = 2500.0;
+	private final static Double _dtimeDefaultValue = 2500.0;
 	private final static String _forceLawsDefaultValue = "nlug";
 	private final static String _stateComparatorDefaultValue = "epseq";
 
 	// some attributes to stores values corresponding to command-line parameters
 	//
-	private static double _dtime = null;
+	private static Double _dtime = null;
 	private static String _inFile = null;
 	private static JSONObject _forceLawsInfo = null;
 	private static JSONObject _stateComparatorInfo = null;
@@ -196,7 +196,7 @@ public class Main {
 	}
 
 	private static void parseForceLawsOption(CommandLine line) throws ParseException {
-		String fl = line.getOptionValue("gl", _forceLawsDefaultValue);
+		String fl = line.getOptionValue("fl", _forceLawsDefaultValue);
 		_forceLawsInfo = parseWRTFactory(fl, _forceLawsFactory);
 		if (_forceLawsInfo == null) {
 			throw new ParseException("Invalid force laws: " + fl);
