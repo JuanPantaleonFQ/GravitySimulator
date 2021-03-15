@@ -41,13 +41,13 @@ public class Body {
     }
 
     //metodos:
-    void addForce(Vector2D f){
+    public void addForce(Vector2D f){
         vector_f.plus(f);
     }
-    void resetForce(){
+    public void resetForce(){
         vector_f = new Vector2D();
     }
-    void move(double t){
+    public void move(double t){
         
         if (this.mass == 0 ) {
             Vector2D vector_a = new Vector2D();
