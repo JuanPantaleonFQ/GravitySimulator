@@ -1,0 +1,25 @@
+MovingTowardsFixedPoint
+-----------------------
+   método apply -> _c.minus(b.getPosition()).direction().scale(_g*b.getMass())
+
+NewtonUniversalGravitation
+--------------------------
+    
+    // calculo de f_ab
+
+    private Vector2D force(Body a, Body b) {
+    Vector2D delta = b.getPosition().minus(a.getPosition());
+    double dist = delta.magnitude();
+    double magnitude = dist>0 ? (_G * a.getMass() * b.getMass()) / (dist * dist) : 0.0;
+    return delta.direction().scale(magnitude);
+   }
+
+Body
+----
+
+método move
+-----------
+
+  _f.scale(1.0 / _mass)
+  _p.plus(_v.scale(t).plus(acc.scale(0.5 * t * t)))
+  _v.plus(acc.scale(t))
