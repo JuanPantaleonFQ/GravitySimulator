@@ -40,7 +40,24 @@ public class Body {
         return this.mass;
     }
 
+   
+    public void setVector_p(Vector2D vector_p) {
+        this.vector_p = vector_p;
+    }
+    
+    public void setVector_f(Vector2D vector_f) {
+        this.vector_f = vector_f;
+    }
+    
+    public void setVector_v(Vector2D vector_v) {
+        this.vector_v = vector_v;
+    }
+
+    
+
+
     //metodos:
+
     public void addForce(Vector2D f){
         vector_f.plus(f);
     }
@@ -60,12 +77,37 @@ public class Body {
             this.vector_v = this.vector_v.plus(vector_a.scale(t));
         }
     }
+
+
     //metodo equals:
 
     public boolean equals(Object obj){
-        return false;        
+        if (this == obj){
+            return true;
+        }else{
+            Body aux = (Body) obj;
+    
+            if(this.id == null) {
+        
+                if(aux.id != null){
+                    return false;
+                }
+                
+        
+            }else if (!this.id.equals(aux.id)){
+
+             return false;
+            }
+
+        }        
+               
+        
+            
+    
+        return true;      
     }
     
+
     //metodos de informacion:
     
     public JSONObject getState(){
@@ -81,6 +123,7 @@ public class Body {
     public String toString(){
         return getState().toString();
     }
+    
 
 
 }
