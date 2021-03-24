@@ -39,6 +39,7 @@ public class NewtonUniversalGravitation implements ForceLaws {
                 }else{
                     fuerzanumeral = 0.00;
                 }
+                
                  out = new Vector2D(auxiliarDireccion.scale(fuerzanumeral));
               
                 
