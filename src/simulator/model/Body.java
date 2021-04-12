@@ -9,9 +9,9 @@ public class Body {
 
     //Atributtes:
     protected String id;
-    protected Vector2D vector_p;    //vector posicion
-    protected Vector2D vector_f;    //vector fuerza 
-    protected Vector2D vector_v;    //vector velocidad
+    protected Vector2D vector_p;    //vector posicion,donde se encuetra el cuerpo.
+    protected Vector2D vector_f;    //vector fuerza,la fuerza que tiene en un momento el cuerpo
+    protected Vector2D vector_v;    //vector velocidad,velocidad de este en el espacio.
     protected double mass;          //masa del cuerpo
 
     //Constructor:

@@ -41,9 +41,9 @@ public class NewtonUniversalGravitation implements ForceLaws {
                 }
                 
                  out = new Vector2D(auxiliarDireccion.scale(fuerzanumeral));
-              
-                
+                              
             }
+            
         
         }
         
@@ -54,6 +54,6 @@ public class NewtonUniversalGravitation implements ForceLaws {
     //metodos de informacion:
 
     public String toString(){
-        return "Universal Gravitation with constant gravitational " + G;
+        return "Universal Gravitation with gravitational constant " + G;
     }
 }

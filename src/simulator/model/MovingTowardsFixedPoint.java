@@ -7,13 +7,18 @@ import simulator.misc.Vector2D;
 public class MovingTowardsFixedPoint implements ForceLaws {
 
     //atributes:
-    private static final double g = 9.81;
-    private Vector2D aux;
+    private Double g;
+    private Vector2D c;
 
     //Constructor:
     public MovingTowardsFixedPoint(){
-        aux = new Vector2D();
-
+        c = new Vector2D();
+        g = 9.81;
+        
+    }
+    public MovingTowardsFixedPoint(Vector2D vector_, double gforce ){
+        c = new Vector2D(vector_);
+        g = gforce;
     }
 
     //metodos_
