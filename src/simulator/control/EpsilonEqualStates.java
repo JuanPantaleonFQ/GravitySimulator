@@ -3,6 +3,8 @@ package simulator.control;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import simulator.misc.Vector2D;
+
 public class EpsilonEqualStates implements StateComparator  {
 
     private double eps;
@@ -43,18 +45,29 @@ public class EpsilonEqualStates implements StateComparator  {
     private boolean comparatorScale(JSONObject j1, JSONObject j2){
         boolean igual = false;
         if (j1.getString("id").equals(j2.getString("id"))){
-            double mass1 = j1.getDouble("mass");
-            double mass2 = j2.getDouble("mass");
-            if (Math.abs(mass1-mass2) <= this.eps) {
-                if () {
-                    
-                }
+            if (moduleEpsilon(j1.getDouble("mass"), j2.getDouble("mass"))){
+                Vector2D f1 = new Vector2D(j1.getJSONArray("f").getDouble(0), j1.getJSONArray("f").getDouble(1)); 
+                Vector2D f2 = new Vector2D(j2.getJSONArray("f").getDouble(0), j2.getJSONArray("f").getDouble(1)); 
+                Vector2D v1 = new Vector2D(j1.getJSONArray("v").getDouble(0), j1.getJSONArray("v").getDouble(1)); 
+                Vector2D v2 = new Vector2D(j2.getJSONArray("v").getDouble(0), j2.getJSONArray("v").getDouble(1)); 
+                Vector2D p1 = new Vector2D(j1.getJSONArray("p").getDouble(0), j1.getJSONArray("p").getDouble(1)); 
+                Vector2D p2 = new Vector2D(j2.getJSONArray("p").getDouble(0), j2.getJSONArray("p").getDouble(1)); 
+                if (moduleEpsilon(f1, f2) && moduleEpsilon(v1, v2) && moduleEpsilon(p1, p2)) {
+                    igual = true;
+                }               
                 
             }
             
         }
         
-        return false;     
+        return igual;     
     }
+    private boolean moduleEpsilon (double a, double b) {
+		return Math.abs(a-b) <= eps;
+	}
+	
+	private boolean moduleEpsilon (Vector2D v1, Vector2D v2) {
+		return v1.distanceTo(v2) <= eps;
+	}
     
 }
