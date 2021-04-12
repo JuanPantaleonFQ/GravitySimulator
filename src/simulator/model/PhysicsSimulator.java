@@ -61,7 +61,7 @@ public class PhysicsSimulator {
         
         
        ;
-        json.put("T", this.tiempoActual);
+        json.put("Time", this.tiempoActual);
         json.put("Bodies", this.getArrayStateBody());
         return json;
     }
