@@ -24,7 +24,7 @@ public class PhysicsSimulator {
             this.forcelaws = f;
             this.dt = t;
             this.tiempoActual = 0.00;
-            this.bs = new ArrayList<Body>();S
+            this.bs = new ArrayList<Body>();
         }
         
     }
