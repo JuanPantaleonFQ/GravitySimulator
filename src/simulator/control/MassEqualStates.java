@@ -38,7 +38,7 @@ public class MassEqualStates implements StateComparator {
     private boolean comparatorBody(JSONObject jsonObject, JSONObject jsonObject2) {
         boolean same= false;
         if (jsonObject.getString("id").equals(jsonObject2.getString("id")) && jsonObject.getDouble("mass") == jsonObject2.getDouble("mass")) {
-            
+            same = true;
         }
 
         return same;

@@ -32,7 +32,7 @@ public class PhysicsSimulator {
 
     //metodos:
 
-    public void advance(){
+    public void advance(){  //Done @JuanPantaleonFQ
 
         for (Body body : bs) {
             body.resetForce();
