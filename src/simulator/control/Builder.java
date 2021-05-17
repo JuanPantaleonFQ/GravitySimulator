@@ -1,7 +1,5 @@
 package simulator.control;
 
-import java.util.Collection;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 

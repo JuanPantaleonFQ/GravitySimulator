@@ -7,7 +7,9 @@ import simulator.misc.Vector2D;
 
 public class EpsilonEqualStates implements StateComparator  {
 
-    private double eps;
+    private double eps;               //determina el valor maximo para la igualdad de vectores.
+
+
     //constructor:
     public EpsilonEqualStates(double eps){
         this.eps = eps;

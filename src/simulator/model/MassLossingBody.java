@@ -10,8 +10,8 @@ public class MassLossingBody extends Body {
     protected Double cnt;               //Contador para saber si ha pasado x tiempo desde la creacion del objeto
     
     //Constructor:
-    public MassLossingBody(String id, Vector2D p, Vector2D v, double m,Double lFactor,Double lFrecuenci) {
-        super(id, p, v, m);
+    public MassLossingBody(String id, Vector2D p, Vector2D v, double mass,Double lFactor,Double lFrecuenci) {
+        super(id, p, v, mass);
         this.lossFactor = lFactor;
         this.lossFrecuency = lFrecuenci;
         this.cnt = 0.00;
